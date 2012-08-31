@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="DShow"
 	ProjectGUID="{6D348A4E-8B40-4FB0-BB57-C982D51FFA01}"
+	RootNamespace="DShow"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>
@@ -45,7 +50,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\include,..\DShow"
+				AdditionalIncludeDirectories="..\include;..\DShow;&quot;..\..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\include&quot;"
 				PreprocessorDefinitions="DEBUG;INC_OLE2;WINVER=0x0400;_X86_=1;STRICT;_WINDOWS;WIN32;STDC_HEADERS"
 				StringPooling="true"
 				RuntimeLibrary="3"
@@ -66,9 +71,9 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="libmp3lame.lib ..\DShow\strmbasD.lib vfw32.lib winmm.lib version.lib Comdlg32.lib comctl32.lib quartz.lib msvcrtd.lib"
-				OutputFile="..\output\Debug\lame.ax"
-				AdditionalLibraryDirectories=""
+				AdditionalDependencies="$(OutDir)\libmp3lame-static.lib $(OutDir)\libmpghip-static.lib strmbase.lib vfw32.lib winmm.lib version.lib Comdlg32.lib comctl32.lib quartz.lib msvcrtd.lib"
+				OutputFile="$(OutDir)\lame_dshow.ax"
+				AdditionalLibraryDirectories="..\..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\Debug Unicode"
 				IgnoreAllDefaultLibraries="true"
 				ModuleDefinitionFile="..\DShow\Mpegac.def"
 				GenerateDebugInformation="true"
@@ -131,7 +136,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="../include,../DShow"
+				AdditionalIncludeDirectories="../include;../DShow;&quot;..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\include&quot;"
 				PreprocessorDefinitions="NDEBUG;INC_OLE2;STRICT;WINVER=0x0400;_X86_=1;_WINDOWS;WIN32;STDC_HEADERS"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -151,11 +156,11 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="libmp3lame.lib ..\DShow\strmbase.lib vfw32.lib winmm.lib version.lib Comdlg32.lib comctl32.lib quartz.lib msvcrt.lib"
-				OutputFile="..\output\Release\lame.ax"
+				AdditionalDependencies="$(OutDir)\libmp3lame-static.lib $(OutDir)\libmpghip-static.lib strmbase.lib&quot; vfw32.lib winmm.lib version.lib Comdlg32.lib comctl32.lib quartz.lib msvcrt.lib"
+				OutputFile="$(OutDir)\lame_dshow.ax"
 				Version="0.3"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories=""
+				AdditionalLibraryDirectories="&quot;..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\Release Unicode&quot;"
 				IgnoreAllDefaultLibraries="true"
 				ModuleDefinitionFile="..\DShow\Mpegac.def"
 				SubSystem="2"
@@ -422,47 +427,7 @@
 			</FileConfiguration>
 		</File>
 		<File
-			RelativePath="..\output\libmp3lame-dynamic.lib"
-			>
-			<FileConfiguration
-				Name="Debug|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="Release|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-				/>
-			</FileConfiguration>
-		</File>
-		<File
 			RelativePath="..\DShow\README"
-			>
-			<FileConfiguration
-				Name="Debug|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-				/>
-			</FileConfiguration>
-			<FileConfiguration
-				Name="Release|Win32"
-				ExcludedFromBuild="true"
-				>
-				<Tool
-					Name="VCCustomBuildTool"
-				/>
-			</FileConfiguration>
-		</File>
-		<File
-			RelativePath="..\DShow\STRMBASE.lib"
 			>
 			<FileConfiguration
 				Name="Debug|Win32"

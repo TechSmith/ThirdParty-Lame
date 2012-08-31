@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="ACM"
 	ProjectGUID="{FC3D65E7-B7CB-406E-B6C9-0B26E30FE7F4}"
+	RootNamespace="ACM"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>
@@ -45,7 +50,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				InlineFunctionExpansion="2"
-				AdditionalIncludeDirectories="../include,../mpglib,../ACM,../ACM/ddk"
+				AdditionalIncludeDirectories="../include;../mpglib;../ACM;../ACM/ddk"
 				PreprocessorDefinitions="NDEBUG;_BLADEDLL;_WINDOWS;WIN32;LAME_ACM"
 				StringPooling="true"
 				RuntimeLibrary="2"
@@ -66,8 +71,8 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="libmp3lame.lib url.lib winmm.lib"
-				OutputFile="..\output\Release\lameACM.acm"
+				AdditionalDependencies="$(OutDir)\libmp3lame-static.lib $(OutDir)\libmpghip-static.lib url.lib winmm.lib"
+				OutputFile="$(OutDir)\TSClame.acm"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories=""
 				IgnoreAllDefaultLibraries="false"
@@ -96,7 +101,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="ACM config files"
-				CommandLine="copy ..\ACM\lameacm.inf $(TargetDir)*.*&#x0D;&#x0A;copy ..\ACM\lame_acm.xml $(TargetDir)*.*&#x0D;&#x0A;"
+				CommandLine="copy ..\ACM\lameacm.inf $(TargetDir)*.*&#x0D;&#x0A;copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml&#x0D;&#x0A;"
 			/>
 		</Configuration>
 		<Configuration
@@ -152,8 +157,8 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="libmp3lame.lib url.lib winmm.lib"
-				OutputFile="..\output\Debug\lameACM.acm"
+				AdditionalDependencies="$(OutDir)\libmp3lame-static.lib $(OutDir)\libmpghip-static.lib url.lib winmm.lib"
+				OutputFile="$(OutDir)\TSClame.acm"
 				AdditionalLibraryDirectories=""
 				IgnoreAllDefaultLibraries="false"
 				ModuleDefinitionFile="..\ACM\lameACM.def"
@@ -182,7 +187,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				Description="ACM config files"
-				CommandLine="copy ..\ACM\lameacm.inf $(TargetDir)*.*&#x0D;&#x0A;copy ..\ACM\lame_acm.xml $(TargetDir)*.*&#x0D;&#x0A;"
+				CommandLine="copy ..\ACM\lameacm.inf $(TargetDir)*.*&#x0D;&#x0A;copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml&#x0D;&#x0A;"
 			/>
 		</Configuration>
 	</Configurations>

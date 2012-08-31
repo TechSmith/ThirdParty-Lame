@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="ACM ADbg"
 	ProjectGUID="{0D7CAB1B-AE57-4BA1-BDBF-D7391AAA81AA}"
+	RootNamespace="ACM ADbg"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="libmp3lame-static"
 	ProjectGUID="{20536101-3B0E-43EF-94F9-080D595DAC57}"
 	RootNamespace="libmp3lame"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>
@@ -128,7 +132,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/libmp3lame-static.lib"
+				OutputFile="$(OutDir)\libmp3lame-static.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"

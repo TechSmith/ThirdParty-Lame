@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="libmpghip-static"
 	ProjectGUID="{E2DAB91A-8248-4625-8A85-2C2C2A390DD8}"
 	RootNamespace="libmpghip"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>
@@ -119,7 +123,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/libmpghip-static.lib"
+				OutputFile="$(OutDir)\libmpghip-static.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"

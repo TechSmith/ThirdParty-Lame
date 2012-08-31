@@ -893,7 +893,7 @@ AEncodeProperties::AEncodeProperties(HMODULE hModule)
 		path = output;
 	}
 	my_store_location = path.substr(0,path.find_last_of('\\')+1);
-	my_store_location += "lame_acm.xml";
+	my_store_location += "TSClame_acm.xml";
 
 	my_debug.OutPut("store path = %s",my_store_location.c_str());
 //#ifdef OLD

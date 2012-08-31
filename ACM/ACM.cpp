@@ -183,7 +183,7 @@ LPARAM lParam  // second message parameter
 	switch (uMsg) {
 		case WM_INITDIALOG:
 			char tmp[150];
-			wsprintf(tmp,"LAME MP3 codec v%s", ACM::GetVersionString());
+			wsprintf(tmp,"TechSmith LAME MP3 codec v%s", ACM::GetVersionString());
 			::SetWindowText(GetDlgItem( hwndDlg, IDC_STATIC_ABOUT_TITLE), tmp);
 
 /*
@@ -645,7 +645,7 @@ inline DWORD ACM::OnFormatTagDetails(LPACMFORMATTAGDETAILS a_FormatTagDetails, c
 				a_FormatTagDetails->cbFormatSize     = SIZE_FORMAT_STRUCT;
 				a_FormatTagDetails->fdwSupport       = ACMDRIVERDETAILS_SUPPORTF_CODEC;
 				a_FormatTagDetails->cStandardFormats = GetNumberEncodingFormats();
-				lstrcpyW( a_FormatTagDetails->szFormatTag, L"Lame MP3" );
+				lstrcpyW( a_FormatTagDetails->szFormatTag, L"MPEG Layer-3 (TechSmith LAME)" );
 				Result = MMSYSERR_NOERROR;
 				break;
 			default:
@@ -691,7 +691,7 @@ inline DWORD ACM::OnDriverDetails(const HDRVR hdrvr, LPACMDRIVERDETAILS a_Driver
 
 	lstrcpyW( a_DriverDetail->szShortName, L"LAME MP3" );
 	char tmpStr[128];
-	wsprintf(tmpStr, "LAME MP3 Codec v%s", GetVersionString());
+	wsprintf(tmpStr, "TechSmith LAME MP3 Codec v%s", GetVersionString());
 	int u = MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, tmpStr, -1, a_DriverDetail->szLongName, 0);
 	MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, tmpStr, -1, a_DriverDetail->szLongName, u);
 	lstrcpyW( a_DriverDetail->szCopyright, L"2002 Steve Lhomme" );

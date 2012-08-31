@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9,00"
+	Version="9.00"
 	Name="lame_enc_dll_example"
 	ProjectGUID="{D169F06E-6607-4A9F-A075-2335717B9AB5}"
 	RootNamespace="lame_enc_dll_example"
+	SccProjectName="SAK"
+	SccAuxPath="SAK"
+	SccLocalPath="SAK"
+	SccProvider="SAK"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>

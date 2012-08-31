@@ -21,7 +21,7 @@
 
 LIBRARY     lame.ax
 EXPORTS
-    DllGetClassObject     PRIVATE
-    DllCanUnloadNow       PRIVATE
+    DllGetClassObject = MyDllGetClassObject    PRIVATE
+    DllCanUnloadNow   = MyDllCanUnloadNow    PRIVATE
     DllRegisterServer     PRIVATE
     DllUnregisterServer   PRIVATE

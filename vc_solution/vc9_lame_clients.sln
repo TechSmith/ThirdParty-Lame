@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C++ Express 2008
+# Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACM ADbg", "vc9_lame_acm_adbg.vcproj", "{0D7CAB1B-AE57-4BA1-BDBF-D7391AAA81AA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACM tinyxml", "vc9_lame_acm_tinyxml.vcproj", "{30219289-3B7F-4E02-BC34-C1DBD08CD848}"
@@ -17,14 +17,25 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lame_enc_dll", "vc9_lame_dl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lame_enc_dll_example", "vc9_lame_dll_example.vcproj", "{D169F06E-6607-4A9F-A075-2335717B9AB5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lame_test", "vc9_lame_test.vcproj", "{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}"
-	ProjectSection(ProjectDependencies) = postProject
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2} = {92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmp3lameDLL", "vc9_libmp3lame_dll.vcproj", "{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}"
-EndProject
 Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs-app:8080/tfs/TSCProjects
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = vc9_lame_acm_adbg.vcproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = vc9_lame_acm_tinyxml.vcproj
+		SccLocalPath2 = .
+		SccProjectUniqueName3 = vc9_lame_acm.vcproj
+		SccLocalPath3 = .
+		SccProjectUniqueName4 = vc9_lame_dshow.vcproj
+		SccLocalPath4 = .
+		SccProjectUniqueName5 = vc9_lame_dll.vcproj
+		SccLocalPath5 = .
+		SccProjectUniqueName6 = vc9_lame_dll_example.vcproj
+		SccLocalPath6 = .
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
@@ -80,22 +91,6 @@ Global
 		{D169F06E-6607-4A9F-A075-2335717B9AB5}.ReleaseNASM|Win32.Build.0 = Release|Win32
 		{D169F06E-6607-4A9F-A075-2335717B9AB5}.ReleaseSSE2|Win32.ActiveCfg = Release|Win32
 		{D169F06E-6607-4A9F-A075-2335717B9AB5}.ReleaseSSE2|Win32.Build.0 = Release|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.Debug|Win32.Build.0 = Debug|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.Release|Win32.ActiveCfg = Release|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.Release|Win32.Build.0 = Release|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.ReleaseNASM|Win32.ActiveCfg = Release|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.ReleaseNASM|Win32.Build.0 = Release|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.ReleaseSSE2|Win32.ActiveCfg = Release|Win32
-		{2FE9808B-2B03-48D9-94FC-6C907D39E2AC}.ReleaseSSE2|Win32.Build.0 = Release|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.Debug|Win32.ActiveCfg = Debug|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.Debug|Win32.Build.0 = Debug|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.Release|Win32.ActiveCfg = Release|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.Release|Win32.Build.0 = Release|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.ReleaseNASM|Win32.ActiveCfg = ReleaseNASM|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.ReleaseNASM|Win32.Build.0 = ReleaseNASM|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.ReleaseSSE2|Win32.ActiveCfg = ReleaseSSE2|Win32
-		{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}.ReleaseSSE2|Win32.Build.0 = ReleaseSSE2|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
