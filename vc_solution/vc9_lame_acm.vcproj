@@ -25,6 +25,8 @@
 			InheritedPropertySheets=".\vc9_lame_config.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
+			CharacterSet="0"
+			EnableManagedIncrementalBuild="0"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -49,13 +51,16 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				InlineFunctionExpansion="2"
+				InlineFunctionExpansion="0"
+				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="../include;../mpglib;../ACM;../ACM/ddk"
 				PreprocessorDefinitions="NDEBUG;_BLADEDLL;_WINDOWS;WIN32;LAME_ACM"
 				StringPooling="true"
 				RuntimeLibrary="2"
-				StructMemberAlignment="2"
+				StructMemberAlignment="0"
 				TreatWChar_tAsBuiltInType="false"
+				Detect64BitPortabilityProblems="true"
+				CompileAs="0"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -70,15 +75,20 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				IgnoreImportLibrary="true"
-				AdditionalDependencies="$(OutDir)\libmp3lame-static.lib $(OutDir)\libmpghip-static.lib url.lib winmm.lib"
+				IgnoreImportLibrary="false"
+				AdditionalDependencies="libmp3lame-static.lib libmpghip-static.lib url.lib winmm.lib"
 				OutputFile="$(OutDir)\TSClame.acm"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories=""
+				AdditionalLibraryDirectories="$(OutDir)"
 				IgnoreAllDefaultLibraries="false"
 				ModuleDefinitionFile="..\ACM\lameACM.def"
+				GenerateDebugInformation="true"
 				SubSystem="2"
-				ImportLibrary="$(IntDir)/$(TargetName).lib"
+				EnableCOMDATFolding="2"
+				LinkTimeCodeGeneration="1"
+				ImportLibrary=""
+				TargetMachine="1"
+				ErrorReporting="2"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -110,6 +120,8 @@
 			InheritedPropertySheets=".\vc9_lame_config.vsprops"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"
+			CharacterSet="0"
+			EnableManagedIncrementalBuild="0"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -135,13 +147,16 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="../include,../mpglib,../ACM,../ACM/ddk"
 				PreprocessorDefinitions="_DEBUG;_BLADEDLL;_WINDOWS;WIN32;LAME_ACM"
 				StringPooling="true"
 				RuntimeLibrary="3"
-				StructMemberAlignment="2"
+				StructMemberAlignment="0"
 				TreatWChar_tAsBuiltInType="false"
+				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
+				CompileAs="0"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -156,15 +171,19 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				IgnoreImportLibrary="true"
-				AdditionalDependencies="$(OutDir)\libmp3lame-static.lib $(OutDir)\libmpghip-static.lib url.lib winmm.lib"
+				IgnoreImportLibrary="false"
+				AdditionalDependencies="libmp3lame-static.lib libmpghip-static.lib url.lib winmm.lib"
 				OutputFile="$(OutDir)\TSClame.acm"
-				AdditionalLibraryDirectories=""
+				AdditionalLibraryDirectories="$(OutDir)"
 				IgnoreAllDefaultLibraries="false"
 				ModuleDefinitionFile="..\ACM\lameACM.def"
 				GenerateDebugInformation="true"
 				SubSystem="2"
-				ImportLibrary="$(IntDir)/$(TargetName).lib"
+				EnableCOMDATFolding="2"
+				LinkTimeCodeGeneration="1"
+				ImportLibrary=""
+				TargetMachine="1"
+				ErrorReporting="2"
 			/>
 			<Tool
 				Name="VCALinkTool"
