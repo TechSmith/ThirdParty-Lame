@@ -81,7 +81,12 @@ const char ACM_VERSION[] = "0.9.2";
 
 #endif
 
-#define PERSONAL_FORMAT WAVE_FORMAT_MPEGLAYER3
+//#define PERSONAL_FORMAT WAVE_FORMAT_MPEGLAYER3
+
+// Just chose a random value that looks to be unused in mmreg.h
+// Not too worried about conflicts because we're only throwing the lameACM.acm file in our local
+// program directory - not going to be available system-wide because we're not throwing it in system32
+#define PERSONAL_FORMAT 0x0700
 #define SIZE_FORMAT_STRUCT sizeof(MPEGLAYER3WAVEFORMAT)
 //#define SIZE_FORMAT_STRUCT 0
 
@@ -689,7 +694,7 @@ inline DWORD ACM::OnDriverDetails(const HDRVR hdrvr, LPACMDRIVERDETAILS a_Driver
 //	a_DriverDetail->cFormatTags = 1; // 2 : MP3 and PCM
 	a_DriverDetail->cFilterTags = FILTER_TAG_MAX_NB;
 
-	lstrcpyW( a_DriverDetail->szShortName, L"LAME MP3" );
+	lstrcpyW( a_DriverDetail->szShortName, L"MPEG Layer-3 (TechSmith LAME)" );
 	char tmpStr[128];
 	wsprintf(tmpStr, "TechSmith LAME MP3 Codec v%s", GetVersionString());
 	int u = MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, tmpStr, -1, a_DriverDetail->szLongName, 0);
