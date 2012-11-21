@@ -423,9 +423,11 @@ private:
 //	std::string OutputDir;
 
 //	AParameters my_base_parameters;
+#ifdef _USE_SETTINGS_XML
 	TiXmlDocument my_stored_data;
 	std::string my_store_location;
 	std::string my_current_config;
+#endif
 
 //	HINSTANCE hDllInstance;
 

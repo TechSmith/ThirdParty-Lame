@@ -768,6 +768,7 @@ void AEncodeProperties::ParamsRestore()
 
 //	DllLocation = "plugins\\lame_enc.dll";
 
+#ifdef _USE_SETTINGS_XML
 	// get the values from the saved file if possible
 	if (my_stored_data.LoadFile(my_store_location))
 	{
@@ -803,6 +804,7 @@ void AEncodeProperties::ParamsRestore()
 			\todo save the data in the file !
 		*/
 	}
+#endif
 }
 
 void AEncodeProperties::ParamsSave()
@@ -892,6 +894,8 @@ AEncodeProperties::AEncodeProperties(HMODULE hModule)
 
 		path = output;
 	}
+
+#ifdef _USE_SETTINGS_XML   
 	my_store_location = path.substr(0,path.find_last_of('\\')+1);
 	my_store_location += "TSClame_acm.xml";
 
@@ -904,11 +908,13 @@ AEncodeProperties::AEncodeProperties(HMODULE hModule)
 	::CloseHandle(hFile);
 //#endif // OLD
 	my_debug.OutPut("AEncodeProperties creation completed (0x%08X)",this);
+#endif
 }
 
 // Save the values to the right XML saved config
 void AEncodeProperties::SaveValuesToStringKey(const std::string & config_name)
 {
+#ifdef _USE_SETTINGS_XML
 	// get the current data in the file to keep them
 	if (my_stored_data.LoadFile(my_store_location))
 	{
@@ -956,6 +962,7 @@ void AEncodeProperties::SaveValuesToStringKey(const std::string & config_name)
 			}
 		}
 	}
+#endif
 }
 
 void AEncodeProperties::GetValuesFromKey(const std::string & config_name, const TiXmlNode & parentNode)
@@ -1265,6 +1272,7 @@ bool AEncodeProperties::operator !=(const AEncodeProperties & the_instance) cons
 
 void AEncodeProperties::SelectSavedParams(const std::string the_string)
 {
+#ifdef _USE_SETTINGS_XML
 	// get the values from the saved file if possible
 	if (my_stored_data.LoadFile(my_store_location))
 	{
@@ -1281,6 +1289,7 @@ void AEncodeProperties::SelectSavedParams(const std::string the_string)
 			my_stored_data.SaveFile(my_store_location);
 		}
 	}
+#endif
 }
 
 inline void AEncodeProperties::SetAttributeBool(TiXmlElement * the_elt,const std::string & the_string, const bool the_value) const
@@ -1791,7 +1800,7 @@ my_debug.OutPut("finished saving");
 bool AEncodeProperties::RenameCurrentTo(const std::string & new_config_name)
 {
 	bool bResult = false;
-
+#ifdef _USE_SETTINGS_XML
 	// display all the names of the saved configs
 	// get the values from the saved file if possible
 	if (my_stored_data.LoadFile(my_store_location))
@@ -1844,14 +1853,14 @@ bool AEncodeProperties::RenameCurrentTo(const std::string & new_config_name)
 			}
 		}
 	}
-
+#endif
 	return bResult;
 }
 
 bool AEncodeProperties::DeleteConfig(const std::string & config_name)
 {
 	bool bResult = false;
-
+#ifdef _USE_SETTINGS_XML
 	if (config_name != "Current")
 	{
 		// display all the names of the saved configs
@@ -1895,14 +1904,17 @@ bool AEncodeProperties::DeleteConfig(const std::string & config_name)
 
 		}
 	}
-
 	return bResult;
+#else
+   return true;
+#endif
 }
 
 void AEncodeProperties::UpdateConfigs(const HWND HwndDlg)
 {
 	// Add User configs
 //	SendMessage(GetDlgItem( HwndDlg, IDC_COMBO_SETTINGS), CB_RESETCONTENT , NULL, NULL);
+#ifdef _USE_SETTINGS_XML
 
 	// display all the names of the saved configs
 	// get the values from the saved file if possible
@@ -1954,6 +1966,7 @@ my_debug.OutPut("iterateElmt = 0x%08X",iterateElmt);
 
 		}
 	}
+#endif
 }
 /*
 void AEncodeProperties::UpdateAbrSteps(unsigned int min, unsigned int max, unsigned int step) const
