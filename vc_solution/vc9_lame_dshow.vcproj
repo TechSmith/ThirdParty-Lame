@@ -163,6 +163,7 @@
 				AdditionalLibraryDirectories="&quot;..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\Release Unicode&quot;;&quot;$(OutDir)&quot;"
 				IgnoreAllDefaultLibraries="true"
 				ModuleDefinitionFile="..\DShow\Mpegac.def"
+				GenerateDebugInformation="true"
 				SubSystem="2"
 				EntryPointSymbol="DllEntryPoint@12"
 				BaseAddress="0x1c400000"
