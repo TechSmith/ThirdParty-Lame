@@ -32,9 +32,9 @@
 #include <msacm.h>
 
 
-
+#ifndef _WIN64
 typedef  unsigned long ULONG_PTR, *PULONG_PTR;
-
+#endif
 
 
 typedef ULONG_PTR DWORD_PTR, *PDWORD_PTR;

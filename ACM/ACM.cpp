@@ -172,7 +172,7 @@ inline DWORD ACM::Configure(HWND hParentWindow, LPDRVCONFIGINFO pConfig)
 // About Dialog
 //////////////////////////////////////////////////////////////////////
 
-static BOOL CALLBACK AboutProc(
+static INT_PTR CALLBACK AboutProc(
   HWND hwndDlg,  // handle to dialog box
 UINT uMsg,     // message
 WPARAM wParam, // first message parameter
@@ -254,11 +254,13 @@ LPARAM lParam  // second message parameter
 
 				if (bUrl)
 				{
+#ifndef _WIN64//I did this because currently linking with url.lib which is win32 only as far as I can tell :(
 					LPSTR tmpStr;
 					HRESULT hresult = ::TranslateURL(Url, TRANSLATEURL_FL_GUESS_PROTOCOL|TRANSLATEURL_FL_GUESS_PROTOCOL, &tmpStr);
 					if (hresult == S_OK)
 						::ShellExecute(hwndDlg,"open",tmpStr,NULL,"",SW_SHOWMAXIMIZED );
 					else if (hresult == S_FALSE)
+#endif
 						::ShellExecute(hwndDlg,"open",Url,NULL,"",SW_SHOWMAXIMIZED );
 				}
 

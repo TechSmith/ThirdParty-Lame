@@ -159,7 +159,7 @@ static int CALLBACK BrowseFolderCallbackroc(
 }
 */
 #pragma argsused
-static BOOL CALLBACK ConfigProc(
+static INT_PTR CALLBACK ConfigProc(
   HWND hwndDlg,  // handle to dialog box
   UINT uMsg,     // message
   WPARAM wParam, // first message parameter
