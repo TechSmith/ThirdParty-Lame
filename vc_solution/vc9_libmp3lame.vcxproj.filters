@@ -2,15 +2,15 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source">
-      <UniqueIdentifier>{7a7f083c-91f2-464d-81b7-85dcfbc76164}</UniqueIdentifier>
+      <UniqueIdentifier>{014a0f8e-9442-4aa6-bca6-0d3fdebb53a3}</UniqueIdentifier>
       <Extensions>c</Extensions>
     </Filter>
     <Filter Include="Include">
-      <UniqueIdentifier>{d0375a69-432f-4368-9273-bd394e7d97ad}</UniqueIdentifier>
+      <UniqueIdentifier>{2ddf49ed-d3b0-4c55-aebf-712fdfcce1b9}</UniqueIdentifier>
       <Extensions>h</Extensions>
     </Filter>
     <Filter Include="Asm">
-      <UniqueIdentifier>{33615bed-a617-4885-a3e1-311d9d8a63a7}</UniqueIdentifier>
+      <UniqueIdentifier>{d69c1dc6-5ec5-4285-b950-e8e07fa2ef9f}</UniqueIdentifier>
       <Extensions>.nas</Extensions>
     </Filter>
   </ItemGroup>

@@ -2,19 +2,19 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source">
-      <UniqueIdentifier>{4bbdcd2f-57d8-4939-913a-2d4f43758cd1}</UniqueIdentifier>
+      <UniqueIdentifier>{760d3773-04d9-4ffa-8528-217caecf3488}</UniqueIdentifier>
       <Extensions>c;cpp</Extensions>
     </Filter>
     <Filter Include="Include">
-      <UniqueIdentifier>{0af90700-4313-4f48-a828-793a8a450b5b}</UniqueIdentifier>
+      <UniqueIdentifier>{a49dd80d-f785-4ce5-bd39-b5cdd8415609}</UniqueIdentifier>
       <Extensions>h</Extensions>
     </Filter>
     <Filter Include="Resource">
-      <UniqueIdentifier>{419d9652-0aae-476e-ba35-7f79f3e3903b}</UniqueIdentifier>
+      <UniqueIdentifier>{6a9c3de8-04fb-49f0-a483-6869d61a577a}</UniqueIdentifier>
       <Extensions>rc</Extensions>
     </Filter>
     <Filter Include="Install">
-      <UniqueIdentifier>{87c8805c-ffaf-4a12-80c5-7cca22851c89}</UniqueIdentifier>
+      <UniqueIdentifier>{48a8df08-23c2-41cc-8e03-b90c358e12ca}</UniqueIdentifier>
       <Extensions>inf;acm</Extensions>
     </Filter>
   </ItemGroup>
