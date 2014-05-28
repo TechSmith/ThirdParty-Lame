@@ -95,7 +95,7 @@
       <Culture>0x040c</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>$(IntDir)$(ProjectName).lib</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -111,7 +111,7 @@
       <Culture>0x040c</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>$(IntDir)$(ProjectName).lib</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -127,7 +127,7 @@
       <Culture>0x040c</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>$(IntDir)$(ProjectName).lib</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -143,7 +143,7 @@
       <Culture>0x040c</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>$(IntDir)$(ProjectName).lib</OutputFile>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
