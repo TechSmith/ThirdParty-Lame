@@ -22,6 +22,10 @@
     <ProjectName>DShow</ProjectName>
     <ProjectGuid>{6D348A4E-8B40-4FB0-BB57-C982D51FFA01}</ProjectGuid>
     <RootNamespace>DShow</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -97,7 +101,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\DShow;..\..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\DShow;..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG;INC_OLE2;WINVER=0x0400;_X86_=1;STRICT;_WINDOWS;WIN32;STDC_HEADERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -111,7 +115,7 @@
     <Link>
       <AdditionalDependencies>libmp3lame-static.lib;libmpghip-static.lib;strmbase.lib;vfw32.lib;winmm.lib;version.lib;Comdlg32.lib;comctl32.lib;quartz.lib;msvcrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)lame_dshow.ax</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\Debug Unicode;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\Debug Unicode;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <ModuleDefinitionFile>..\DShow\Mpegac.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,7 +137,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\DShow;..\..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\DShow;..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>DEBUG;INC_OLE2;WINVER=0x0400;STRICT;_WINDOWS;WIN32;STDC_HEADERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -147,7 +151,7 @@
     <Link>
       <AdditionalDependencies>libmp3lame-static.lib;libmpghip-static.lib;strmbase.lib;vfw32.lib;winmm.lib;version.lib;Comdlg32.lib;comctl32.lib;quartz.lib;msvcrtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)lame_dshow.ax</OutputFile>
-      <AdditionalLibraryDirectories>..\..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\x64 Debug Unicode;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\x64 Debug Unicode;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <ModuleDefinitionFile>..\DShow\Mpegac.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -182,7 +186,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>libmp3lame-static.lib;libmpghip-static.lib;strmbase.lib vfw32.lib winmm.lib version.lib Comdlg32.lib comctl32.lib quartz.lib msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmp3lame-static.lib;libmpghip-static.lib;strmbase.lib;vfw32.lib;winmm.lib;version.lib;Comdlg32.lib;comctl32.lib;quartz.lib;msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)lame_dshow.ax</OutputFile>
       <Version>0.3</Version>
       <AdditionalLibraryDirectories>..\..\..\DirectShowBaseClasses\BASECLASSES 2009.VS10\lib\Release Unicode;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -195,6 +199,10 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetDir)lame_dshow.ax $(SolutionDir)..\redist\lame_dshow.ax
+      copy $(TargetDir)DShow.pdb $(SolutionDir)..\redist\lame_dshow.pdb</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
@@ -226,12 +234,15 @@
       <ModuleDefinitionFile>..\DShow\Mpegac.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <EntryPointSymbol>
-      </EntryPointSymbol>
+      <EntryPointSymbol>DllEntryPoint</EntryPointSymbol>
       <BaseAddress>0x1c400000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>copy $(TargetDir)lame_dshow.ax $(SolutionDir)..\redist\x64\lame_dshow.ax
+      copy $(TargetDir)DShow.pdb $(SolutionDir)..\redist\x64\lame_dshow.pdb</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\DShow\aboutprp.cpp">

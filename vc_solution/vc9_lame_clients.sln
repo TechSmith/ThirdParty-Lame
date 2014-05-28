@@ -15,10 +15,22 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lame_enc_dll_example", "vc9
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 1
+		SccNumberOfProjects = 7
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://tfs-app:8080/tfs/tscprojects
 		SccLocalPath0 = .
+		SccProjectUniqueName1 = vc9_lame_dshow.vcxproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = vc9_lame_acm_adbg.vcxproj
+		SccLocalPath2 = .
+		SccProjectUniqueName3 = vc9_lame_acm_tinyxml.vcxproj
+		SccLocalPath3 = .
+		SccProjectUniqueName4 = vc9_lame_acm.vcxproj
+		SccLocalPath4 = .
+		SccProjectUniqueName5 = vc9_lame_dll.vcxproj
+		SccLocalPath5 = .
+		SccProjectUniqueName6 = vc9_lame_dll_example.vcxproj
+		SccLocalPath6 = .
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32

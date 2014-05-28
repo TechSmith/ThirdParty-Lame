@@ -22,6 +22,10 @@
     <ProjectName>ACM</ProjectName>
     <ProjectGuid>{FC3D65E7-B7CB-406E-B6C9-0B26E30FE7F4}</ProjectGuid>
     <RootNamespace>ACM</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -133,7 +137,9 @@
       <Message>ACM config files</Message>
       <Command>copy ..\ACM\lameacm.inf $(TargetDir)*.*
 copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
-</Command>
+copy ..\ACM\lame_acm.xml $(SolutionDir)..\redist\TSClame_acm.xml
+copy $(TargetDir)TSClame.acm $(SolutionDir)..\redist\TSClame.acm
+copy $(TargetDir)ACM.pdb $(SolutionDir)..\redist\TSClame.pdb</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -178,6 +184,9 @@ copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
       <Message>ACM config files</Message>
       <Command>copy ..\ACM\lameacm.inf $(TargetDir)*.*
 copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
+copy ..\ACM\lame_acm.xml $(SolutionDir)..\redist\x64\TSClame_acm.xml
+copy $(TargetDir)TSClame.acm $(SolutionDir)..\redist\x64\TSClame.acm
+copy $(TargetDir)ACM.pdb $(SolutionDir)..\redist\x64\TSClame.pdb
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
