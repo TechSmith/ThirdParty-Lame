@@ -38,6 +38,10 @@
     <ProjectName>libmp3lame</ProjectName>
     <ProjectGuid>{92BD50AA-04D6-4FBF-ACE1-468FAF6778F2}</ProjectGuid>
     <RootNamespace>libmp3lameDLL</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE2|Win32'" Label="Configuration">
