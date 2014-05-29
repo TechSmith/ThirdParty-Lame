@@ -88,9 +88,9 @@
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\output\$(PlatformName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\redist\$(PlatformName)_$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\obj\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\output\$(PlatformName)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\redist\$(PlatformName)_$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\obj\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TSClame</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.acm</TargetExt>
@@ -100,6 +100,8 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.acm</TargetExt>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TSClame</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.acm</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\redist\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\redist\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -143,11 +145,7 @@
     </Link>
     <PostBuildEvent>
       <Message>ACM config files</Message>
-      <Command>xcopy /D /Y /F "..\ACM\lameacm.inf" "$(TargetDir)*.*"
-xcopy /D /Y /F "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
-xcopy /D /Y /F "..\ACM\lame_acm.xml" "$(SolutionDir)..\redist\TSClame_acm.xml"
-xcopy /D /Y /F "$(TargetDir)TSClame.acm" "$(SolutionDir)..\redist\TSClame.acm"
-xcopy /D /Y /F "$(TargetDir)TSClame.pdb" "$(SolutionDir)..\redist\TSClame.pdb"</Command>
+      <Command>xcopy /D /Y /F "..\ACM\lameacm.inf" "$(TargetDir)*.*"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -190,12 +188,7 @@ xcopy /D /Y /F "$(TargetDir)TSClame.pdb" "$(SolutionDir)..\redist\TSClame.pdb"</
     </Link>
     <PostBuildEvent>
       <Message>ACM config files</Message>
-      <Command>copy ..\ACM\lameacm.inf $(TargetDir)*.*
-copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
-copy ..\ACM\lame_acm.xml $(SolutionDir)..\redist\x64\TSClame_acm.xml
-copy $(TargetDir)TSClame.acm $(SolutionDir)..\redist\x64\TSClame.acm
-copy $(TargetDir)TSClame.pdb $(SolutionDir)..\redist\x64\TSClame.pdb
-</Command>
+      <Command>xcopy /D /Y /F "..\ACM\lameacm.inf" "$(TargetDir)*.*"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -241,9 +234,7 @@ copy $(TargetDir)TSClame.pdb $(SolutionDir)..\redist\x64\TSClame.pdb
     </Link>
     <PostBuildEvent>
       <Message>ACM config files</Message>
-      <Command>copy ..\ACM\lameacm.inf $(TargetDir)*.*
-copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
-</Command>
+      <Command>xcopy /D /Y /F "..\ACM\lameacm.inf" "$(TargetDir)*.*"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -287,9 +278,7 @@ copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
     </Link>
     <PostBuildEvent>
       <Message>ACM config files</Message>
-      <Command>copy ..\ACM\lameacm.inf $(TargetDir)*.*
-copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
-</Command>
+      <Command>xcopy /D /Y /F "..\ACM\lameacm.inf" "$(TargetDir)*.*"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
