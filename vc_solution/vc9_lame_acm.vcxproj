@@ -143,11 +143,11 @@
     </Link>
     <PostBuildEvent>
       <Message>ACM config files</Message>
-      <Command>copy ..\ACM\lameacm.inf $(TargetDir)*.*
-copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
-copy ..\ACM\lame_acm.xml $(SolutionDir)..\redist\TSClame_acm.xml
-copy $(TargetDir)TSClame.acm $(SolutionDir)..\redist\TSClame.acm
-copy $(TargetDir)TSClame.pdb $(SolutionDir)..\redist\TSClame.pdb</Command>
+      <Command>xcopy /D /Y /F "..\ACM\lameacm.inf" "$(TargetDir)*.*"
+xcopy /D /Y /F "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
+xcopy /D /Y /F "..\ACM\lame_acm.xml" "$(SolutionDir)..\redist\TSClame_acm.xml"
+xcopy /D /Y /F "$(TargetDir)TSClame.acm" "$(SolutionDir)..\redist\TSClame.acm"
+xcopy /D /Y /F "$(TargetDir)TSClame.pdb" "$(SolutionDir)..\redist\TSClame.pdb"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
