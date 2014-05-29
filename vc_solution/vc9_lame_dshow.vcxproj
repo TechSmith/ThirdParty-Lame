@@ -88,6 +88,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\obj\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\output\$(PlatformName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\obj\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lame_dshow</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.ax</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lame_dshow</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.ax</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lame_dshow</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.ax</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lame_dshow</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.ax</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -201,7 +209,7 @@
     </Link>
     <PostBuildEvent>
       <Command>copy $(TargetDir)lame_dshow.ax $(SolutionDir)..\redist\lame_dshow.ax
-      copy $(TargetDir)DShow.pdb $(SolutionDir)..\redist\lame_dshow.pdb</Command>
+copy $(TargetDir)lame_dshow.pdb $(SolutionDir)..\redist\lame_dshow.pdb</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -241,7 +249,7 @@
     </Link>
     <PostBuildEvent>
       <Command>copy $(TargetDir)lame_dshow.ax $(SolutionDir)..\redist\x64\lame_dshow.ax
-      copy $(TargetDir)DShow.pdb $(SolutionDir)..\redist\x64\lame_dshow.pdb</Command>
+copy $(TargetDir)lame_dshow.pdb $(SolutionDir)..\redist\x64\lame_dshow.pdb</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
