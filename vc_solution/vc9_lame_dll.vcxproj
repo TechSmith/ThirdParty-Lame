@@ -115,7 +115,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>$(OutDir)libmp3lame.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)lame_enc.dll</OutputFile>
+      <OutputFile>$(OutDir)lame_enc_dll.dll</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)lame_enc.lib</ImportLibrary>
@@ -144,7 +144,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>$(OutDir)libmp3lame.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)lame_enc.dll</OutputFile>
+      <OutputFile>$(OutDir)lame_enc_dll.dll</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)lame_enc.lib</ImportLibrary>
@@ -173,7 +173,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>$(OutDir)libmp3lame.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)lame_enc.dll</OutputFile>
+      <OutputFile>$(OutDir)lame_enc_dll.dll</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)lame_enc.lib</ImportLibrary>
     </Link>
@@ -200,7 +200,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>$(OutDir)libmp3lame.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)lame_enc.dll</OutputFile>
+      <OutputFile>$(OutDir)lame_enc_dll.dll</OutputFile>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)lame_enc.lib</ImportLibrary>
     </Link>
