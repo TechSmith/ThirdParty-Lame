@@ -92,6 +92,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\obj\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\output\$(PlatformName)\$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\obj\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TSClame</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.acm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TSClame</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.acm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">TSClame</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.acm</TargetExt>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">TSClame</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.acm</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -139,7 +147,7 @@
 copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
 copy ..\ACM\lame_acm.xml $(SolutionDir)..\redist\TSClame_acm.xml
 copy $(TargetDir)TSClame.acm $(SolutionDir)..\redist\TSClame.acm
-copy $(TargetDir)ACM.pdb $(SolutionDir)..\redist\TSClame.pdb</Command>
+copy $(TargetDir)TSClame.pdb $(SolutionDir)..\redist\TSClame.pdb</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -186,7 +194,7 @@ copy $(TargetDir)ACM.pdb $(SolutionDir)..\redist\TSClame.pdb</Command>
 copy ..\ACM\lame_acm.xml $(TargetDir)TSClame_acm.xml
 copy ..\ACM\lame_acm.xml $(SolutionDir)..\redist\x64\TSClame_acm.xml
 copy $(TargetDir)TSClame.acm $(SolutionDir)..\redist\x64\TSClame.acm
-copy $(TargetDir)ACM.pdb $(SolutionDir)..\redist\x64\TSClame.pdb
+copy $(TargetDir)TSClame.pdb $(SolutionDir)..\redist\x64\TSClame.pdb
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
