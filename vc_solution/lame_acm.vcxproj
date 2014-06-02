@@ -149,6 +149,12 @@
 copy "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
 </Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>md "$(TargetDir)"
+pushd "$(TargetDir)"
+attrib -R /S
+popd</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
@@ -194,6 +200,12 @@ copy "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
 copy "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
 </Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>md "$(TargetDir)"
+pushd "$(TargetDir)"
+attrib -R /S
+popd</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -242,6 +254,12 @@ copy "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
 copy "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
 </Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>md "$(TargetDir)"
+pushd "$(TargetDir)"
+attrib -R /S
+popd</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
@@ -288,6 +306,12 @@ copy "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
 copy "..\ACM\lame_acm.xml" "$(TargetDir)TSClame_acm.xml"
 </Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>md "$(TargetDir)"
+pushd "$(TargetDir)"
+attrib -R /S
+popd</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\ACM\ACM.cpp">
