@@ -1,6 +1,8 @@
 
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lame", "lame_lame.vcxproj", "{EEF5B49E-DBD1-4E1B-8B86-C5D64FCBAD38}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmp3lame-static", "libmp3lame.vcxproj", "{20536101-3B0E-43EF-94F9-080D595DAC57}"
@@ -10,6 +12,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libmpghip-static", "mpglib.vcxproj", "{E2DAB91A-8248-4625-8A85-2C2C2A390DD8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mp3rtp", "lame_mp3rtp.vcxproj", "{C04BA4EA-F719-456D-A332-6C3AF92D7BEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{6AB2FDFA-47B6-474C-9984-9D8E5977D049}"
+	ProjectSection(SolutionItems) = preProject
+		Windows8SDK.Win32.props = Windows8SDK.Win32.props
+		Windows8SDK.x64.props = Windows8SDK.x64.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

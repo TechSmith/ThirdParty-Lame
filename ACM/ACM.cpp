@@ -252,17 +252,17 @@ LPARAM lParam  // second message parameter
 					bUrl = true;
 				}
 
-				if (bUrl)
-				{
-#ifndef _WIN64//I did this because currently linking with url.lib which is win32 only as far as I can tell :(
-					LPSTR tmpStr;
-					HRESULT hresult = ::TranslateURL(Url, TRANSLATEURL_FL_GUESS_PROTOCOL|TRANSLATEURL_FL_GUESS_PROTOCOL, &tmpStr);
-					if (hresult == S_OK)
-						::ShellExecute(hwndDlg,"open",tmpStr,NULL,"",SW_SHOWMAXIMIZED );
-					else if (hresult == S_FALSE)
-#endif
-						::ShellExecute(hwndDlg,"open",Url,NULL,"",SW_SHOWMAXIMIZED );
-				}
+				// Comment these lines out: url.lib is in Windows SDK 7.1 and is not found in Windows SDK 8.1 anymore
+				// and the equivalent one UrlMon.lib just won't link neither 32 nor 64 bit.
+				//if (bUrl)
+				//{
+				//	LPSTR tmpStr;
+				//	HRESULT hresult = ::TranslateURL(Url, TRANSLATEURL_FL_GUESS_PROTOCOL|TRANSLATEURL_FL_GUESS_PROTOCOL, &tmpStr);
+				//	if (hresult == S_OK)
+				//		::ShellExecute(hwndDlg,"open",tmpStr,NULL,"",SW_SHOWMAXIMIZED );
+				//	else if (hresult == S_FALSE)
+				//		::ShellExecute(hwndDlg,"open",Url,NULL,"",SW_SHOWMAXIMIZED );
+				//}
 
 			}
 			break;
