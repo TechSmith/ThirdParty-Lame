@@ -31,7 +31,6 @@
 #include <mmreg.h>
 #include <msacm.h>
 
-
 #ifndef _WIN64
 typedef  unsigned long ULONG_PTR, *PULONG_PTR;
 #endif
@@ -94,17 +93,17 @@ typedef ULONG_PTR DWORD_PTR, *PDWORD_PTR;
 #define ACMDM_STREAM_PREPARE            (ACMDM_BASE + 81)
 #define ACMDM_STREAM_UNPREPARE          (ACMDM_BASE + 82)
 
+#pragma pack(push,1)
 typedef struct tACMDRVFORMATSUGGEST
 {
     DWORD               cbStruct;           // sizeof(ACMDRVFORMATSUGGEST)
     DWORD               fdwSuggest;         // Suggest flags
     LPWAVEFORMATEX      pwfxSrc;            // Source Format
-    DWORD               cbwfxSrc;           // Source Size
+    DWORD               cbwfxSrc;           // Source Size    
     LPWAVEFORMATEX      pwfxDst;            // Dest format
     DWORD               cbwfxDst;           // Dest Size
 
 } ACMDRVFORMATSUGGEST, *PACMDRVFORMATSUGGEST, FAR *LPACMDRVFORMATSUGGEST;
-
 
 
 
@@ -181,5 +180,7 @@ typedef struct tACMDRVSTREAMHEADER
     DWORD                   cbPreparedDstLength;
 
 } ACMDRVSTREAMHEADER, *PACMDRVSTREAMHEADER;
+
+#pragma pack(pop)
 
 #endif
