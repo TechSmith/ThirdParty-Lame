@@ -78,7 +78,7 @@ extern "C" {
 
 ADbg * debug = NULL;
 
-LONG WINAPI DriverProc(DWORD dwDriverId, HDRVR hdrvr, UINT msg, LONG lParam1, LONG lParam2)
+LONG_PTR WINAPI DriverProc(DWORD dwDriverId, HDRVR hdrvr, UINT msg, LONG_PTR lParam1, LONG_PTR lParam2)
 {
 
 	switch (msg)

@@ -63,7 +63,7 @@ public:
 	ACM( HMODULE hModule );
 	virtual ~ACM();
 
-	LONG DriverProcedure(const HDRVR hdrvr, const UINT msg, LONG lParam1, LONG lParam2);
+	LONG_PTR DriverProcedure(const HDRVR hdrvr, const UINT msg, LONG_PTR lParam1, LONG_PTR lParam2);
 
 	static const char * GetVersionString(void) {return VersionString;}
 

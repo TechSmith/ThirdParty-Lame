@@ -352,7 +352,7 @@ ACM::~ACM()
 // Main message handler
 //////////////////////////////////////////////////////////////////////
 
-LONG ACM::DriverProcedure(const HDRVR hdrvr, const UINT msg, LONG lParam1, LONG lParam2)
+LONG_PTR ACM::DriverProcedure(const HDRVR hdrvr, const UINT msg, LONG_PTR lParam1, LONG_PTR lParam2)
 {
     DWORD dwRes = 0L;
 
