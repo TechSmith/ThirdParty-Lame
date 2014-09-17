@@ -215,7 +215,7 @@ static INT_PTR CALLBACK ConfigProc(
 		case WM_NOTIFY:
 			if (TTN_GETDISPINFO == ((LPNMHDR)lParam)->code) {
 				NMTTDISPINFO *lphdr = (NMTTDISPINFO *)lParam;
-				UINT id = (lphdr->uFlags & TTF_IDISHWND) ? GetWindowLong((HWND)lphdr->hdr.idFrom, GWL_ID) : lphdr->hdr.idFrom;
+				UINT_PTR id = (lphdr->uFlags & TTF_IDISHWND) ? GetWindowLong((HWND)lphdr->hdr.idFrom, GWL_ID) : lphdr->hdr.idFrom;
 
 				*lphdr->lpszText = 0;
 
@@ -398,7 +398,7 @@ bool AEncodeProperties::Config(const HINSTANCE Hinstance, const HWND HwndParent)
 //	hDllInstance = Hinstance;
 
 	my_debug.OutPut("here");
-	int ret = ::DialogBoxParam(Hinstance, MAKEINTRESOURCE(IDD_CONFIG), HwndParent, ::ConfigProc, (LPARAM) this);
+	INT_PTR ret = ::DialogBoxParam(Hinstance, MAKEINTRESOURCE(IDD_CONFIG), HwndParent, ::ConfigProc, (LPARAM) this);
 /*	if (ret == -1)
 	{
 		LPVOID lpMsgBuf;
@@ -1975,7 +1975,7 @@ void AEncodeProperties::UpdateAbrSteps(unsigned int min, unsigned int max, unsig
 */
 void AEncodeProperties::UpdateDlgFromSlides(HWND hwndDlg) const
 {
-	UINT value_min, value_max, value_step, value;
+	UINT_PTR value_min, value_max, value_step, value;
 	char tmp[4];
 
 	value_min = SendMessage(GetDlgItem( hwndDlg, IDC_SLIDER_AVERAGE_MIN), TBM_GETPOS, NULL, NULL);
@@ -2010,7 +2010,7 @@ void AEncodeProperties::UpdateDlgFromSlides(HWND hwndDlg) const
 	::SetWindowText(GetDlgItem( hwndDlg, IDC_STATIC_AVERAGE_STEP_VALUE), tmp);
 
 	SendMessage(GetDlgItem( hwndDlg, IDC_SLIDER_AVERAGE_SAMPLE), TBM_CLEARTICS, TRUE, 0);
-	for(UINT i=value_max; i>=value_min;i-=value_step)
+	for(UINT_PTR i=value_max; i>=value_min;i-=value_step)
 	{
 		SendMessage(GetDlgItem( hwndDlg, IDC_SLIDER_AVERAGE_SAMPLE), TBM_SETTIC, 0, i);
 	}
