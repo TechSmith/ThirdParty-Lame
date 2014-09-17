@@ -975,7 +975,7 @@ inline DWORD ACM::OnStreamOpen(LPACMDRVSTREAMINSTANCE a_StreamInstance)
 					if ((a_StreamInstance->fdwOpen & ACM_STREAMOPENF_QUERY) == 0)
 					{
 						ACMStream * the_stream = ACMStream::Create();
-						a_StreamInstance->dwInstance = (DWORD) the_stream;
+						a_StreamInstance->dwInstance = (DWORD_PTR) the_stream;
 
 						if (the_stream != NULL)
 						{
@@ -1009,7 +1009,7 @@ inline DWORD ACM::OnStreamOpen(LPACMDRVSTREAMINSTANCE a_StreamInstance)
 					my_debug.OutPut(DEBUG_LEVEL_FUNC_CODE, "Open stream for PCM output (%05d samples %d channels %d bits/sample %d B/s)",a_StreamInstance->pwfxDst->nSamplesPerSec,a_StreamInstance->pwfxDst->nChannels,a_StreamInstance->pwfxDst->wBitsPerSample,a_StreamInstance->pwfxDst->nAvgBytesPerSec);
 
 					DecodeStream * the_stream = DecodeStream::Create();
-					a_StreamInstance->dwInstance = (DWORD) the_stream;
+					a_StreamInstance->dwInstance = (DWORD_PTR) the_stream;
 
 					if (the_stream != NULL)
 					{
