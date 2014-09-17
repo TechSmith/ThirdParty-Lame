@@ -78,7 +78,7 @@ extern "C" {
 
 ADbg * debug = NULL;
 
-LONG_PTR WINAPI DriverProc(DWORD dwDriverId, HDRVR hdrvr, UINT msg, LONG_PTR lParam1, LONG_PTR lParam2)
+LONG_PTR WINAPI DriverProc(DWORD_PTR dwDriverId, HDRVR hdrvr, UINT msg, LONG_PTR lParam1, LONG_PTR lParam2)
 {
 
 	switch (msg)
@@ -123,7 +123,7 @@ LONG_PTR WINAPI DriverProc(DWORD dwDriverId, HDRVR hdrvr, UINT msg, LONG_PTR lPa
 				debug->OutPut(DEBUG_LEVEL_FUNC_CODE, "OPENED instance 0x%08X",ThisACM);
 			}
 
-			return (LONG)ThisACM;// returns 0L to fail
+			return (LONG_PTR)ThisACM;// returns 0L to fail
 								// value subsequently used
 								// for dwDriverId.
 		}

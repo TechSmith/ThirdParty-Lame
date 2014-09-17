@@ -486,7 +486,7 @@ switch (msg) {
 	default:
 	// Process any other messages.
 		my_debug.OutPut(DEBUG_LEVEL_MSG, "ACM::DriverProc unknown message (0x%08X), lParam1 = 0x%08X, lParam2 = 0x%08X", msg, lParam1, lParam2);
-		return DefDriverProc ((DWORD)this, hdrvr, msg, lParam1, lParam2);
+		return DefDriverProc ((DWORD_PTR)this, hdrvr, msg, lParam1, lParam2);
     }
 
     return dwRes;
