@@ -163,8 +163,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,61,24875
- PRODUCTVERSION 1,0,61,24875
+ FILEVERSION 3,99,5,0
+ PRODUCTVERSION 3,99,5,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -181,12 +181,12 @@ BEGIN
         BEGIN
             VALUE "Comments", "LAME DirectShow Filter"
             VALUE "FileDescription", "LAME Audio Encoder"
-            VALUE "FileVersion", "1.0.61.90411"
+            VALUE "FileVersion", "3.99.5.0"
             VALUE "InternalName", "LAME Audio Encoder"
             VALUE "LegalCopyright", "Copyright © 2005 Elecard Ltd."
             VALUE "OriginalFilename", "lame.ax"
             VALUE "ProductName", "LAME Audio Encoder"
-            VALUE "ProductVersion", "1.0.61.90411"
+            VALUE "ProductVersion", "3.99.5.0"
         END
     END
     BLOCK "VarFileInfo"
