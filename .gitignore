@@ -50,10 +50,10 @@ dlldata.c
 *.scc
 
 # Visual Studio output directories
-#Debug/
-#Release/
-#Win32/
-#x64/
+Debug/
+Release/
+Win32/
+x64/
 
 # NuGet (Don't check in your packages! Use Package Restore!)
 packages/
@@ -96,3 +96,7 @@ $RECYCLE.BIN/
 # Mac crap
 .DS_Store
 
+# Lame specific
+x64_Debug/
+x64_Release/
+config.h
