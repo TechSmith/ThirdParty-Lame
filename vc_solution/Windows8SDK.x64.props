@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Label="PropertySheets" />
-  <PropertyGroup Label="UserMacros">
-    <WindowsSdkDir>C:\Program Files (x86)\Windows Kits\8.0\</WindowsSdkDir>
-  </PropertyGroup>
-  <PropertyGroup>
-    <_PropertySheetDisplayName>Windows 8 SDK (x64)</_PropertySheetDisplayName>
-    <IncludePath>$(WindowsSdkDir)include\shared;$(WindowsSdkDir)include\um;$(IncludePath)</IncludePath>
-    <ExecutablePath>$(WindowsSdkDir)bin\x86;$(ExecutablePath)</ExecutablePath>
-    <ExcludePath>$(WindowsSdkDir)include\shared;$(WindowsSdkDir)include\um;$(ExcludePath)</ExcludePath>
-    <LibraryPath>$(WindowsSdkDir)lib\win8\um\x64;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
-  <ItemDefinitionGroup />
-  <ItemGroup>
-    <BuildMacro Include="WindowsSdkDir">
-      <Value>$(WindowsSdkDir)</Value>
-      <EnvironmentVariable>true</EnvironmentVariable>
-    </BuildMacro>
-  </ItemGroup>
+   <ImportGroup Label="PropertySheets" />
+   <PropertyGroup Label="UserMacros">
+      <WindowsSdkDir>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v8.1A@InstallationFolder)</WindowsSdkDir>
+      <WindowsSdkDir Condition="'$(WindowsSdkDir)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SDKs\Windows\v8.1A@InstallationFolder)</WindowsSdkDir>
+   </PropertyGroup>
+   <PropertyGroup>
+      <_PropertySheetDisplayName>Windows 8.1 SDK (x64)</_PropertySheetDisplayName>
+      <ExecutablePath>$(MSBuildProgramFiles32)\Windows Kits\8.1\bin\x86;$(ExecutablePath);</ExecutablePath>
+      <NativeExecutablePath>$(MSBuildProgramFiles32)\Windows Kits\8.1\bin\x64;$(NativeExecutablePath);$(ExecutablePath);</NativeExecutablePath>
+      <IncludePath>$(MSBuildProgramFiles32)\Windows Kits\8.1\Include\um;$(MSBuildProgramFiles32)\Windows Kits\8.1\Include\shared;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(FrameworkSDKDir)\include;</IncludePath>
+      <LibraryPath>$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(MSBuildProgramFiles32)\Windows Kits\8.1\lib\winv6.3\um\x64;$(FrameworkSDKDir)\lib\x64;</LibraryPath>
+      <ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(MSBuildProgramFiles32)\Windows Kits\8.1\Include\um;$(MSBuildProgramFiles32)\Windows Kits\8.1\Include\shared;$(FrameworkSDKDir)\include;$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;</ExcludePath>
+   </PropertyGroup>
+   <ItemDefinitionGroup />
+   <ItemGroup>
+      <BuildMacro Include="WindowsSdkDir">
+         <Value>$(WindowsSdkDir)</Value>
+         <EnvironmentVariable>true</EnvironmentVariable>
+      </BuildMacro>
+   </ItemGroup>
 </Project>
