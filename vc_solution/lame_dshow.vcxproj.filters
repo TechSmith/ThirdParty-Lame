@@ -41,6 +41,7 @@
     <None Include="..\DShow\elogo.ico">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\DShow\Property.rc">

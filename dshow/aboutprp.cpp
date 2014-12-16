@@ -21,7 +21,7 @@
  */
 
 #include <windows.h>
-#include <streams.h>
+#include <DirectShowBaseClasses/streams.h>
 #include <olectl.h>
 #include <commctrl.h>
 #include "iaudioprops.h"
