@@ -1,0 +1,62 @@
+nuget
+{
+   nuspec
+   {
+      id = lame-tsc-package;
+      version: 3.99.5.0;
+      title: LAME Ain't an MP3 Encoder;
+      authors: { TechSmith Corporation };
+      owners: { TechSmith Corporation };
+      licenseUrl: "https://www.gnu.org/licenses/lgpl-2.1.html";
+      projectUrl: "https://github.com/TechSmith/ThirdParty-Windows-Expat";
+      iconUrl: "http://lame.sourceforge.net/favicon.ico";
+      requireLicenseAcceptance: false;
+      summary: LAME for use in TechSmith products;
+      releaseNotes: "";
+      description: @"LAME is a high quality MPEG Audio Layer III (MP3) encoder. Package contains DirectShow filter (lame_dshow.ax) and ACM Codec (TSCLame.acm).";
+      copyright: @"Copyright (C) 1999-2011 The L.A.M.E. Team";
+      tags: { lame, CoApp, mp3, encoder, vs2013, directshow, filter, acm };
+   };
+
+   files
+   {
+      include:{ ..\dshow\iaudioprops.h; };
+
+      [Win32, v120]
+      {
+         bin: { ..\redist\Release\lame_dshow.ax;
+                ..\redist\Release\lame_dshow.pdb;
+                ..\redist\Release\TSClame.acm;
+                ..\redist\Release\TSClame.pdb;
+                ..\redist\Release\TSClame_acm.xml; }
+      };
+     
+      [x64, v120]
+      {
+         bin: { ..\redist\x64_Release\lame_dshow.ax;
+                ..\redist\x64_Release\lame_dshow.pdb;
+                ..\redist\x64_Release\TSClame.acm;
+                ..\redist\x64_Release\TSClame.pdb;
+                ..\redist\x64_Release\TSClame_acm.xml; }
+      };
+   };
+
+   props
+   {
+      // Additional declarations to insert into consuming projects before most of the
+      // project settings. (These may be modified in visual studio by a developer
+      // consuming this package.)
+      // This node is typically not needed for most packages and may be omitted.
+   }
+
+   targets
+   {
+      // Additional declarations to insert into consuming projects after most of the
+      // project settings. (These may NOT be modified in visual studio by a developer
+      // consuming this package.)
+      // This node is often used to set defines that are required that must be set by
+      // the consuming project in order to correctly link to the libraries in this
+      // package.  Such defines may be set either globally or only set under specific
+      // conditions.
+   }
+}
