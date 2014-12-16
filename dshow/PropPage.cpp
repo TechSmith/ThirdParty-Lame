@@ -20,7 +20,7 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#include <streams.h>
+#include <DirectShowBaseClasses/streams.h>
 #include <olectl.h>
 #include <commctrl.h>
 #include "iaudioprops.h"
