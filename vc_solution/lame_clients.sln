@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ACM ADbg", "lame_acm_adbg.vcxproj", "{0D7CAB1B-AE57-4BA1-BDBF-D7391AAA81AA}"
 EndProject
@@ -19,6 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Windows8SDK.Win32.props = Windows8SDK.Win32.props
 		Windows8SDK.x64.props = Windows8SDK.x64.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{345024CC-20F1-4AAF-B7AC-2B97E4131B63}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
 	EndProjectSection
 EndProject
 Global
