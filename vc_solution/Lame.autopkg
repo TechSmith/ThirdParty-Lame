@@ -5,7 +5,7 @@ nuget
       id = lame-tsc-package;
       version: 3.99.5.0;
       title: LAME Ain't an MP3 Encoder;
-      authors: { TechSmith Corporation };
+      authors: { TechSmith Corporation, The LAME Project };
       owners: { TechSmith Corporation };
       licenseUrl: "https://www.gnu.org/licenses/lgpl-2.1.html";
       projectUrl: "https://github.com/TechSmith/ThirdParty-Windows-Expat";
