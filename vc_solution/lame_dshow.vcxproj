@@ -22,10 +22,6 @@
     <ProjectName>DShow</ProjectName>
     <ProjectGuid>{6D348A4E-8B40-4FB0-BB57-C982D51FFA01}</ProjectGuid>
     <RootNamespace>DShow</RootNamespace>
-    <SccProjectName>SAK</SccProjectName>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
