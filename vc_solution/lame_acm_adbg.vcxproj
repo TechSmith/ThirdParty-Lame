@@ -22,10 +22,6 @@
     <ProjectName>ACM ADbg</ProjectName>
     <ProjectGuid>{0D7CAB1B-AE57-4BA1-BDBF-D7391AAA81AA}</ProjectGuid>
     <RootNamespace>ACM ADbg</RootNamespace>
-    <SccProjectName>SAK</SccProjectName>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

@@ -38,10 +38,6 @@
     <ProjectName>lame</ProjectName>
     <ProjectGuid>{EEF5B49E-DBD1-4E1B-8B86-C5D64FCBAD38}</ProjectGuid>
     <RootNamespace>lame</RootNamespace>
-    <SccProjectName>SAK</SccProjectName>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSSE2|Win32'" Label="Configuration">

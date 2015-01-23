@@ -22,10 +22,6 @@
     <ProjectName>lame_enc_dll_example</ProjectName>
     <ProjectGuid>{D169F06E-6607-4A9F-A075-2335717B9AB5}</ProjectGuid>
     <RootNamespace>lame_enc_dll_example</RootNamespace>
-    <SccProjectName>SAK</SccProjectName>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
