@@ -25,6 +25,7 @@ dlldata.c
 *.user
 *.sln.docstates
 .vs/
+obj/
 
 *_i.c
 *_p.c
